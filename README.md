@@ -6,3 +6,6 @@ website street food sederhana atau coffe shop, cocok untuk mengembangkan bisnis 
 
 ## Demo Aplikasi
 <img src="upload/demo.gif" alt="alt text" width="600"/>
+
+## Contact
+[Dimas263](https://github.com/Dimas263/street_food_sederhana)
