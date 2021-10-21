@@ -10,6 +10,8 @@ website street food sederhana atau coffe shop, cocok untuk mengembangkan bisnis 
 ## Contact
 [Dimas263](https://github.com/Dimas263/street_food_sederhana)
 
+## License
+
 MIT License
 
 Copyright (c) 2021 Dimas Dwi Putra
