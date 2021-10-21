@@ -1,0 +1,145 @@
+
+/*------------------------------------------------- */
+/* =  Header
+ *------------------------------------------------- */
+
+header {
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 999999;
+    @include tablets {
+        a.button-one {
+            display: none;
+        }
+    }
+}
+
+.navbar {
+    padding: 0;
+    @include transition(0.2s);
+    border-bottom: none;
+    width: 100%;
+    z-index: 999999;
+    background: #ffffff !important;
+    border-bottom: none;
+    
+    a.navbar-brand {
+        float: none;
+    }
+    @include tablets {
+        a.navbar-brand {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin: 0 15px;
+        }
+    }
+    @include tablets {
+        button.navbar-toggler {
+            margin: 0 15px;
+        }
+    }
+}
+
+.navbar-nav {
+    @include transition(0.2s);
+    > li > a {
+        color: $title-color !important;
+        font-size: 18px;
+        font-weight: 400 !important;
+        @include transition(0.2s);
+        padding: 26px 15px 26px !important;
+        margin: 0 7px -1px;
+        position: relative;
+        i {
+            font-size: 13px;
+            margin-left: 5px;
+        }
+    }
+    > li:last-child > a {
+        padding-right: 0 !important;
+        margin-right: 0;
+    }
+    > li > a.active,
+    > li > a:hover {
+        color: $primary-color !important;
+    }
+    li.drop-link {
+        position: relative;
+    }
+    @include tablets {
+        border-top: 1px solid #ebebeb;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        max-height: 300px;
+        overflow-y: scroll;
+        > li a {
+            padding: 15px 0 !important;
+        }
+    }
+}
+
+.navbar-collapse {
+    position: relative;
+}
+
+.dropdown {
+    @extend .reset-elem;
+    position: absolute;
+    border-top: 2px solid $primary-color;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    width: 200px;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 10px;
+    @include transition(0.15s);
+    > li {
+        position: relative;
+        display: block;
+        border-bottom: 1px solid #e3e1f3;
+        a {
+            display: block;
+            padding: 15px 20px;
+            color: $title-color;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        > a:hover {
+            background: #f2f4f8;
+            color: $primary-color;
+        }
+        .dropdown.level2 {
+            top: -2px;
+            left: 100%;
+            border-left: 1px solid #292929;
+        }
+    }
+    @include tablets {
+        position: relative;
+        border-top: 1px solid #e3e1f3;
+        border-bottom: 1px solid #e3e1f3;
+        top: initial;
+        left: initial;
+        width: 100%;
+        margin-top: 0 !important;
+        visibility: visible;
+        opacity: 1;
+        padding-left: 30px;
+        > li {
+            border: none!important;
+        }
+        > li a {
+            background: transparent !important;
+        }
+    }
+}
+li:hover > .dropdown {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -1px;
+}

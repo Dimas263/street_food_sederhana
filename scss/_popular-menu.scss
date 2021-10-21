@@ -1,0 +1,97 @@
+/*------------------------------------------------- */
+/* =  Popular menu section */
+/*------------------------------------------------- */
+
+section.popular-menu-section {
+    padding: 100px 0 80px;
+    @include retina('../upload/banners/ban1.jpg', 2, cover, center center no-repeat);
+    .popular-menu-box {
+        margin: 0 -15px;
+    }
+    .popular-menu-post {
+        margin: 0 15px;
+        padding: 15px 30px 40px;
+        background: #fafafa;
+        text-align: center;
+        img {
+            width: 100%;
+            height: auto;
+            min-height: 290px;
+            margin-bottom: 30px;
+        }
+        h3 {
+            margin-bottom: 5px;
+        }
+        p {
+            padding: 0 20px;
+            margin-bottom: 5px;
+        }
+        span.price {
+            color: $primary-color;
+            display: block;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    }
+    .owl-controls {
+        z-index: 999;
+    }
+    .owl-pagination {
+        padding-top: 20px;
+        .owl-page span {
+            width: 10px;
+            height: 10px;
+        }
+    }
+    .owl-theme .owl-controls .owl-page.active span, 
+    .owl-theme .owl-controls.clickable .owl-page:hover span {
+        background: $primary-color;
+        border-color: $primary-color;
+    }
+    .owl-buttons {
+        display: block;
+        position: absolute;
+        top: 50%;
+        margin-top: -30px;
+        width: 100%;
+        @include tablets {
+            display: none;
+        }
+    }
+    .owl-buttons div {
+        background: transparent !important;
+        margin: 0;
+        padding: 0 !important;
+        width: 60px;
+        height: 60px;
+        border: 1px solid #a1a1a1;
+        line-height: 58px !important;
+        text-align: center;
+        color: #222222 !important;
+        @include transition(0.2s);
+        &:hover {
+            background-color: $primary-color !important;
+            border-color: transparent !important;
+            color: #fff !important;
+        }
+    }
+    .owl-buttons div.owl-prev {
+        margin-left: -80px;
+        float: left;
+    }
+    .owl-buttons div.owl-next {
+        margin-right: -80px;
+        float: right;
+    }
+    .owl-buttons div.owl-prev:before {
+        content: '\f104';
+        font-family: 'FontAwesome';
+        font-size: 24px;
+    }
+    .owl-buttons div.owl-next:before {
+        content: '\f105';
+        font-family: 'FontAwesome';
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,2314 @@
+/*-------------------------------------------------
+ =  Table of Css
+
+ 1.basic style of template
+ 2.Header
+ 3.Isotope filtering
+ 4.Kenburn slider basic
+ 5.General
+ 6.banner sections
+ 7.popular menu Section
+ 8.services section
+ 9.menu section
+ 10.testimonial section
+ 11.gallery section
+ 12.news section
+ 13.Sidebar
+ 14.Single post
+ 15.about section
+ 16.contact
+ 17.Book section
+ 18.Footer
+-------------------------------------------------*/
+.reset-elem, .dropdown, ul.page-ban-list, section.menu-section .menu-box .menu-holder ul.menu-list, .pagination-list-box ul.pages-list, .sidebar .category-widget ul, .sidebar .popular-widget ul.popular-list, .comment-area-box > ul, footer .up-footer .footer-widget ul.social-list {
+  margin: 0;
+  padding: 0; }
+
+p, .paragraph, .other-posts__desc {
+  font-size: 17px;
+  color: #000000;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  line-height: 26px;
+  margin: 0 0 10px; }
+
+h1, .heading1 {
+  color: #000000;
+  font-size: 90px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 600;
+  margin: 0 0 10px; }
+
+h2, .heading2 {
+  color: #000000;
+  font-size: 50px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 600;
+  margin: 0 0 10px;
+  line-height: 56px; }
+
+h3, .heading3 {
+  color: #000000;
+  font-size: 24px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 600;
+  margin: 0 0 15px;
+  line-height: 28px; }
+
+h4, .heading4, .title-section span, section.about-section .about-box .content-holder > span, section.team-section .team-box .team-post span {
+  color: #000000;
+  font-size: 20px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 600;
+  margin: 0 0 15px;
+  line-height: 28px; }
+
+.back-cover {
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important; }
+
+a, .anchor {
+  display: inline-block;
+  text-decoration: none !important;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out; }
+
+/*-------------------------------------------------
+ =  Responsive mixins
+-------------------------------------------------*/
+/*------------------------------------------------- */
+/* =  Header
+ *------------------------------------------------- */
+header {
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 999999; }
+  @media (max-width: 991px) {
+    header a.button-one {
+      display: none; } }
+
+.navbar {
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  border-bottom: none;
+  width: 100%;
+  z-index: 999999;
+  background: #ffffff !important;
+  border-bottom: none; }
+  .navbar a.navbar-brand {
+    float: none; }
+  @media (max-width: 991px) {
+    .navbar a.navbar-brand {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin: 0 15px; } }
+  @media (max-width: 991px) {
+    .navbar button.navbar-toggler {
+      margin: 0 15px; } }
+
+.navbar-nav {
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out; }
+  .navbar-nav > li > a {
+    color: #000000 !important;
+    font-size: 18px;
+    font-weight: 500 !important;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    padding: 26px 15px 26px !important;
+    margin: 0 7px -1px;
+    position: relative; }
+    .navbar-nav > li > a i {
+      font-size: 13px;
+      margin-left: 5px; }
+  .navbar-nav > li:last-child > a {
+    padding-right: 0 !important;
+    margin-right: 0; }
+  .navbar-nav > li > a.active,
+  .navbar-nav > li > a:hover {
+    color: #ea462b !important; }
+  .navbar-nav li.drop-link {
+    position: relative; }
+  @media (max-width: 991px) {
+    .navbar-nav {
+      border-top: 1px solid #ebebeb;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      max-height: 300px;
+      overflow-y: scroll; }
+      .navbar-nav > li a {
+        padding: 15px 0 !important; } }
+
+.navbar-collapse {
+  position: relative; }
+
+.dropdown {
+  position: absolute;
+  border-top: 2px solid #ea462b;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  width: 200px;
+  visibility: hidden;
+  opacity: 0;
+  margin-top: 10px;
+  transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out; }
+  .dropdown > li {
+    position: relative;
+    display: block;
+    border-bottom: 1px solid #e3e1f3; }
+    .dropdown > li a {
+      display: block;
+      padding: 15px 20px;
+      color: #000000;
+      font-size: 18px;
+      font-weight: 400; }
+    .dropdown > li > a:hover {
+      background: #f2f4f8;
+      color: #ea462b; }
+    .dropdown > li .dropdown.level2 {
+      top: -2px;
+      left: 100%;
+      border-left: 1px solid #292929; }
+  @media (max-width: 991px) {
+    .dropdown {
+      position: relative;
+      border-top: 1px solid #e3e1f3;
+      border-bottom: 1px solid #e3e1f3;
+      top: initial;
+      left: initial;
+      width: 100%;
+      margin-top: 0 !important;
+      visibility: visible;
+      opacity: 1;
+      padding-left: 30px; }
+      .dropdown > li {
+        border: none !important; }
+      .dropdown > li a {
+        background: transparent !important; } }
+
+li:hover > .dropdown {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -1px; }
+
+/**
+ * Allows you to use retina images at various pixel densities.
+ * Examples:
+ *
+ *   @include retina(/images/mypic.jpg, 2);
+ *   @include retina(/images/mypic.jpg, 3, 100px 100px, left top no-repeat transparent);
+ *
+ * @param  {Value}  $path               The path to the file name minus extension.
+ * @param  {Number} $cap:    2          The highest pixel density level images exist for.
+ * @param  {Value}  $size:   auto auto  The intended width of the rendered image.
+ * @param  {Value}  $extras: null       Any other `background` values to be added.
+ */
+/*-------------------------------------------------- */
+/* 1. Isotope filtering */
+/*------------------------------------------------- */
+.isotope-item {
+  z-index: 2; }
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1; }
+
+.isotope, .isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  transition-duration: 0.8s; }
+
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  transition-property: height, width; }
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  transition-property: transform, opacity; }
+
+/*-----------------------------------------------------------------------------
+ *
+ *KENBURNER RESPONSIVE BASIC STYLES OF HTML DOCUMENT
+ *
+ *Screen Stylesheet
+ *
+ *version:    1.0
+ *date:       07/27/11
+ *author:     themepunch
+ *email:      support@themepunch.com
+ *website:    http://www.themepunch.com */
+/*----------------------------------------------------------------------------- */
+.boxedcontainer {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0px 30px; }
+
+/*********************************************
+ *    -   SETTINGS FOR BANNER CONTAINERS  -
+ ********************************************* */
+.tp-banner-container {
+  width: 100%;
+  position: relative;
+  padding: 0; }
+
+.tp-banner {
+  width: 100%;
+  position: relative; }
+
+.tp-banner-fullscreen-container {
+  width: 100%;
+  position: relative;
+  padding: 0; }
+
+/*------------------------------------------------- */
+/* =  General */
+/*------------------------------------------------- */
+body {
+  font-family: "Zilla Slab", serif; }
+
+#container {
+  overflow: hidden;
+  opacity: 0; }
+
+#container.active {
+  opacity: 1; }
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  z-index: 9999; }
+
+.preloader img {
+  -webkit-backface-visibility: hidden; }
+
+.title-section {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative; }
+  .title-section h2 {
+    margin-bottom: 0; }
+  .title-section span {
+    margin-bottom: 0; }
+
+.title-section.white-style h2 {
+  color: #ffffff; }
+
+.title-section.white-style span {
+  color: #ffffff; }
+
+#home-section {
+  overflow: hidden;
+  background: #111111; }
+  #home-section .tp-caption.Concept-Title {
+    font-size: 90px;
+    font-family: "Zilla Slab", serif;
+    font-weight: 600 !important;
+    letter-spacing: -2px !important;
+    color: #000000; }
+  #home-section .tp-caption.Concept-SubTitle {
+    font-family: "Zilla Slab", serif;
+    font-size: 26px;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    text-align: center;
+    color: #000000; }
+  #home-section .persephone .tp-bullet {
+    width: 30px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.5);
+    border: none; }
+  #home-section .persephone .tp-bullet:hover, #home-section .persephone .tp-bullet.selected {
+    background: #fff; }
+
+a.button-one {
+  color: #000000;
+  font-size: 18px;
+  padding: 10px 35px;
+  border: 1px solid #ea462b;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  margin: 0; }
+  a.button-one:hover {
+    color: #ffffff;
+    background: #ea462b; }
+
+a.button-two {
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 35px;
+  background: #ea462b;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  margin: 0; }
+  a.button-two:hover {
+    color: #ea462b;
+    background: #ffffff; }
+
+.center-button {
+  text-align: center; }
+
+button.mfp-close, button.mfp-arrow, a.zoom {
+  outline: none; }
+
+section.page-banner-section {
+  padding: 150px 0 75px;
+  /*
+   * Set a counter and get the length of the image path.
+   */
+  /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+  /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+  /*
+     * Set a base background for 1x environments.
+     */
+  background: #111 url("../upload/banners/page-ban.jpg") center center no-repeat;
+  background-size: cover;
+  /*
+     * Create an @2x-ish media query.
+     */
+  /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+  /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    section.page-banner-section {
+      background: #111 url("../upload/banners/page-ban@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    section.page-banner-section {
+      background: #111 url("../upload/banners/page-ban@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  section.page-banner-section h1 {
+    font-size: 50px;
+    color: #ffffff;
+    margin-bottom: 0px; }
+  section.page-banner-section span {
+    font-size: 22px;
+    font-family: "Zilla Slab", serif;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: #ffffff; }
+
+ul.page-ban-list {
+  padding: 16px 0; }
+  ul.page-ban-list li {
+    display: inline-block;
+    margin-right: 4px; }
+    ul.page-ban-list li a {
+      color: #000000;
+      font-size: 16px;
+      font-family: "Lato", sans-serif;
+      transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out; }
+    ul.page-ban-list li a:hover {
+      color: #ea462b;
+      text-decoration: underline !important; }
+  ul.page-ban-list li:before {
+    content: '\f105';
+    font-family: 'FontAwesome';
+    font-size: 14px;
+    color: #000000;
+    margin-right: 6px; }
+  ul.page-ban-list li:first-child:before {
+    content: '';
+    margin-right: 0; }
+
+.marg-top {
+  margin-top: 80px; }
+  .marg-top ul.page-ban-list {
+    border-top: 1px solid #252428; }
+
+.ban-line-section {
+  background: #ea462b;
+  padding: 70px;
+  text-align: center; }
+  .ban-line-section h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0; }
+
+.ban-line-section.second-style {
+  background: #fff;
+  text-align: center; }
+  .ban-line-section.second-style h2 {
+    color: #000000; }
+    .ban-line-section.second-style h2 span {
+      display: inline-block;
+      margin-right: 100px; }
+    .ban-line-section.second-style h2 a {
+      line-height: 20px; }
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 34px !important;
+    line-height: 40px !important; }
+  h1 {
+    font-size: 46px !important;
+    line-height: 50px !important; } }
+
+/*------------------------------------------------- */
+/* =  Banner sections */
+/*------------------------------------------------- */
+section.banner-section {
+  padding: 130px 0;
+  /*
+   * Set a counter and get the length of the image path.
+   */
+  /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+  /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+  /*
+     * Set a base background for 1x environments.
+     */
+  background: #111 url("../upload/banners/1.jpg") center center no-repeat;
+  background-size: cover;
+  /*
+     * Create an @2x-ish media query.
+     */
+  /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+  /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    section.banner-section {
+      background: #111 url("../upload/banners/1@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    section.banner-section {
+      background: #111 url("../upload/banners/1@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  section.banner-section h3 {
+    font-weight: 400;
+    color: #ffffff; }
+  section.banner-section h2 {
+    color: #ffffff; }
+  section.banner-section span {
+    display: block;
+    color: #ea462b;
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    line-height: 60px; }
+    @media (max-width: 768px) {
+      section.banner-section span {
+        font-size: 50px;
+        line-height: 44px; } }
+
+section.banner-section2 {
+  padding: 130px 0;
+  text-align: center;
+  /*
+   * Set a counter and get the length of the image path.
+   */
+  /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+  /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+  /*
+     * Set a base background for 1x environments.
+     */
+  background: #111 url("../upload/banners/ban2.jpg") center center no-repeat;
+  background-size: cover;
+  /*
+     * Create an @2x-ish media query.
+     */
+  /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+  /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    section.banner-section2 {
+      background: #111 url("../upload/banners/ban2@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    section.banner-section2 {
+      background: #111 url("../upload/banners/ban2@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  section.banner-section2 .banner-box {
+    max-width: 820px;
+    margin: 0 auto; }
+  section.banner-section2 h3 {
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 25px; }
+  section.banner-section2 h2 {
+    color: #ffffff; }
+
+section.banner-section3 {
+  padding: 190px 0;
+  /*
+   * Set a counter and get the length of the image path.
+   */
+  /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+  /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+  /*
+     * Set a base background for 1x environments.
+     */
+  background: #111 url("../upload/banners/ban9.jpg") center center no-repeat;
+  background-size: cover;
+  /*
+     * Create an @2x-ish media query.
+     */
+  /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+  /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    section.banner-section3 {
+      background: #111 url("../upload/banners/ban9@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    section.banner-section3 {
+      background: #111 url("../upload/banners/ban9@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  @media (max-width: 991px) {
+    section.banner-section3 {
+      background: #ebebeb; } }
+  section.banner-section3.bg-second {
+    /*
+   * Set a counter and get the length of the image path.
+   */
+    /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+    /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+    /*
+     * Set a base background for 1x environments.
+     */
+    background: #111 url("../upload/banners/ban12.jpg") center center no-repeat;
+    background-size: cover;
+    /*
+     * Create an @2x-ish media query.
+     */
+    /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+    /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+      section.banner-section3.bg-second {
+        background: #111 url("../upload/banners/ban12@2x.jpg") center center no-repeat;
+        background-size: cover; } }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      section.banner-section3.bg-second {
+        background: #111 url("../upload/banners/ban12@2x.jpg") center center no-repeat;
+        background-size: cover; } }
+  section.banner-section3 h3 {
+    font-weight: 400;
+    color: #000000; }
+  section.banner-section3 span {
+    display: block;
+    color: #ea462b;
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    line-height: 60px; }
+    @media (max-width: 768px) {
+      section.banner-section3 span {
+        font-size: 50px;
+        line-height: 44px; } }
+
+/*------------------------------------------------- */
+/* =  Popular menu section */
+/*------------------------------------------------- */
+section.popular-menu-section {
+  padding: 100px 0 80px;
+  /*
+   * Set a counter and get the length of the image path.
+   */
+  /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+  /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+  /*
+     * Set a base background for 1x environments.
+     */
+  background: #111 url("../upload/banners/ban1.jpg") center center no-repeat;
+  background-size: cover;
+  /*
+     * Create an @2x-ish media query.
+     */
+  /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+  /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    section.popular-menu-section {
+      background: #111 url("../upload/banners/ban1@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    section.popular-menu-section {
+      background: #111 url("../upload/banners/ban1@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  section.popular-menu-section .popular-menu-box {
+    margin: 0 -15px; }
+  section.popular-menu-section .popular-menu-post {
+    margin: 0 15px;
+    padding: 15px 30px 40px;
+    background: #fafafa;
+    text-align: center; }
+    section.popular-menu-section .popular-menu-post img {
+      width: 100%;
+      height: auto;
+      min-height: 290px;
+      margin-bottom: 30px; }
+    section.popular-menu-section .popular-menu-post h3 {
+      margin-bottom: 5px; }
+    section.popular-menu-section .popular-menu-post p {
+      padding: 0 20px;
+      margin-bottom: 5px; }
+    section.popular-menu-section .popular-menu-post span.price {
+      color: #ea462b;
+      display: block;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px; }
+  section.popular-menu-section .owl-controls {
+    z-index: 999; }
+  section.popular-menu-section .owl-pagination {
+    padding-top: 20px; }
+    section.popular-menu-section .owl-pagination .owl-page span {
+      width: 10px;
+      height: 10px; }
+  section.popular-menu-section .owl-theme .owl-controls .owl-page.active span,
+  section.popular-menu-section .owl-theme .owl-controls.clickable .owl-page:hover span {
+    background: #ea462b;
+    border-color: #ea462b; }
+  section.popular-menu-section .owl-buttons {
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    width: 100%; }
+    @media (max-width: 991px) {
+      section.popular-menu-section .owl-buttons {
+        display: none; } }
+  section.popular-menu-section .owl-buttons div {
+    background: transparent !important;
+    margin: 0;
+    padding: 0 !important;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #a1a1a1;
+    line-height: 58px !important;
+    text-align: center;
+    color: #222222 !important;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out; }
+    section.popular-menu-section .owl-buttons div:hover {
+      background-color: #ea462b !important;
+      border-color: transparent !important;
+      color: #fff !important; }
+  section.popular-menu-section .owl-buttons div.owl-prev {
+    margin-left: -80px;
+    float: left; }
+  section.popular-menu-section .owl-buttons div.owl-next {
+    margin-right: -80px;
+    float: right; }
+  section.popular-menu-section .owl-buttons div.owl-prev:before {
+    content: '\f104';
+    font-family: 'FontAwesome';
+    font-size: 24px; }
+  section.popular-menu-section .owl-buttons div.owl-next:before {
+    content: '\f105';
+    font-family: 'FontAwesome';
+    font-size: 24px; }
+
+/*------------------------------------------------- */
+/* =  Services section */
+/*------------------------------------------------- */
+section.services-section .services-box {
+  padding: 65px 0 40px;
+  border-top: 1px solid #ebebeb; }
+  section.services-section .services-box .services-post {
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 30px; }
+    section.services-section .services-box .services-post img {
+      margin-bottom: 20px; }
+
+section.services-section.border-btm .services-box {
+  padding: 80px 0;
+  border-top: none;
+  border-bottom: 1px solid #ebebeb; }
+
+/*------------------------------------------------- */
+/* =  Menu section */
+/*------------------------------------------------- */
+section.menu-section {
+  padding: 100px 0 0; }
+  section.menu-section .menu-box {
+    margin-bottom: 100px; }
+    section.menu-section .menu-box.pizza-menu {
+      background: #ffffff url("../upload/banners/ban3.jpg") 0 0 no-repeat; }
+    section.menu-section .menu-box.pasta-menu {
+      background: #ffffff url("../upload/banners/ban4.jpg") right 0 no-repeat; }
+    section.menu-section .menu-box.burger-menu {
+      background: #ffffff url("../upload/banners/ban5.jpg") 0 0 no-repeat; }
+    section.menu-section .menu-box .image-holder img {
+      width: 100%;
+      height: auto; }
+    @media (max-width: 768px) {
+      section.menu-section .menu-box .image-holder {
+        margin-bottom: 30px; } }
+    section.menu-section .menu-box .menu-holder h2 {
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #e1e1e1; }
+    @media (max-width: 768px) {
+      section.menu-section .menu-box .menu-holder {
+        margin-bottom: 30px; } }
+    section.menu-section .menu-box .menu-holder ul.menu-list li {
+      display: flex;
+      margin-bottom: 25px; }
+      section.menu-section .menu-box .menu-holder ul.menu-list li:last-child {
+        margin-bottom: 0; }
+      section.menu-section .menu-box .menu-holder ul.menu-list li img {
+        max-width: 60px;
+        height: auto;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%; }
+      section.menu-section .menu-box .menu-holder ul.menu-list li .img-box {
+        max-width: 60px;
+        margin-right: 20px; }
+      section.menu-section .menu-box .menu-holder ul.menu-list li .menu-cont {
+        width: 100%; }
+        section.menu-section .menu-box .menu-holder ul.menu-list li .menu-cont h4 {
+          color: #000000;
+          font-weight: 600;
+          margin-bottom: 0px;
+          border-bottom: 1px dotted #a6a6a6;
+          line-height: 20px; }
+          section.menu-section .menu-box .menu-holder ul.menu-list li .menu-cont h4 span {
+            background: #fff;
+            padding: 3px 0; }
+          section.menu-section .menu-box .menu-holder ul.menu-list li .menu-cont h4 span.title-menu {
+            padding-right: 10px; }
+          section.menu-section .menu-box .menu-holder ul.menu-list li .menu-cont h4 span.price {
+            float: right;
+            color: #ea462b;
+            padding-left: 10px; }
+        section.menu-section .menu-box .menu-holder ul.menu-list li .menu-cont p {
+          margin-top: 10px; }
+    section.menu-section .menu-box div.menu-post {
+      padding: 15px 30px 40px;
+      background: #fafafa;
+      text-align: center;
+      margin-bottom: 30px; }
+      section.menu-section .menu-box div.menu-post img {
+        width: 100%;
+        height: auto;
+        min-height: 290px;
+        margin-bottom: 30px; }
+      section.menu-section .menu-box div.menu-post h3 {
+        margin-bottom: 5px; }
+      section.menu-section .menu-box div.menu-post p {
+        padding: 0 20px;
+        margin-bottom: 5px; }
+      section.menu-section .menu-box div.menu-post span.price {
+        color: #ea462b;
+        display: block;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px; }
+  section.menu-section.style-two {
+    padding-top: 0; }
+    section.menu-section.style-two .menu-box {
+      background: #ffffff; }
+      section.menu-section.style-two .menu-box .menu-title {
+        text-align: center;
+        padding: 80px 30px;
+        margin-bottom: 40px; }
+      section.menu-section.style-two .menu-box.pizza-menu .menu-title {
+        /*
+   * Set a counter and get the length of the image path.
+   */
+        /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+        /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+        /*
+     * Set a base background for 1x environments.
+     */
+        background: #111 url("../upload/menu/pizza-ban.jpg") center center no-repeat;
+        background-size: cover;
+        /*
+     * Create an @2x-ish media query.
+     */
+        /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+        /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+        @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+          section.menu-section.style-two .menu-box.pizza-menu .menu-title {
+            background: #111 url("../upload/menu/pizza-ban@2x.jpg") center center no-repeat;
+            background-size: cover; } }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          section.menu-section.style-two .menu-box.pizza-menu .menu-title {
+            background: #111 url("../upload/menu/pizza-ban@2x.jpg") center center no-repeat;
+            background-size: cover; } }
+      section.menu-section.style-two .menu-box.pasta-menu .menu-title {
+        /*
+   * Set a counter and get the length of the image path.
+   */
+        /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+        /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+        /*
+     * Set a base background for 1x environments.
+     */
+        background: #111 url("../upload/menu/pasta-ban.jpg") center center no-repeat;
+        background-size: cover;
+        /*
+     * Create an @2x-ish media query.
+     */
+        /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+        /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+        @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+          section.menu-section.style-two .menu-box.pasta-menu .menu-title {
+            background: #111 url("../upload/menu/pasta-ban@2x.jpg") center center no-repeat;
+            background-size: cover; } }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          section.menu-section.style-two .menu-box.pasta-menu .menu-title {
+            background: #111 url("../upload/menu/pasta-ban@2x.jpg") center center no-repeat;
+            background-size: cover; } }
+      section.menu-section.style-two .menu-box.burger-menu .menu-title {
+        /*
+   * Set a counter and get the length of the image path.
+   */
+        /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+        /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+        /*
+     * Set a base background for 1x environments.
+     */
+        background: #111 url("../upload/menu/burger-ban.jpg") center center no-repeat;
+        background-size: cover;
+        /*
+     * Create an @2x-ish media query.
+     */
+        /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+        /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+        @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+          section.menu-section.style-two .menu-box.burger-menu .menu-title {
+            background: #111 url("../upload/menu/burger-ban@2x.jpg") center center no-repeat;
+            background-size: cover; } }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          section.menu-section.style-two .menu-box.burger-menu .menu-title {
+            background: #111 url("../upload/menu/burger-ban@2x.jpg") center center no-repeat;
+            background-size: cover; } }
+      section.menu-section.style-two .menu-box.desert-menu .menu-title {
+        /*
+   * Set a counter and get the length of the image path.
+   */
+        /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+        /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+        /*
+     * Set a base background for 1x environments.
+     */
+        background: #111 url("../upload/menu/desert-ban.jpg") center center no-repeat;
+        background-size: cover;
+        /*
+     * Create an @2x-ish media query.
+     */
+        /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+        /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+        @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+          section.menu-section.style-two .menu-box.desert-menu .menu-title {
+            background: #111 url("../upload/menu/desert-ban@2x.jpg") center center no-repeat;
+            background-size: cover; } }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          section.menu-section.style-two .menu-box.desert-menu .menu-title {
+            background: #111 url("../upload/menu/desert-ban@2x.jpg") center center no-repeat;
+            background-size: cover; } }
+      section.menu-section.style-two .menu-box .menu-holder .menu-list li img {
+        border: 1px solid #d7d7d7; }
+  section.menu-section.style-three {
+    padding: 100px 0;
+    /*
+   * Set a counter and get the length of the image path.
+   */
+    /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+    /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+    /*
+     * Set a base background for 1x environments.
+     */
+    background: #111 url("../upload/banners/ban10.jpg") center center no-repeat;
+    background-size: cover;
+    /*
+     * Create an @2x-ish media query.
+     */
+    /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+    /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+      section.menu-section.style-three {
+        background: #111 url("../upload/banners/ban10@2x.jpg") center center no-repeat;
+        background-size: cover; } }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      section.menu-section.style-three {
+        background: #111 url("../upload/banners/ban10@2x.jpg") center center no-repeat;
+        background-size: cover; } }
+    section.menu-section.style-three .menu-box {
+      margin: 0; }
+      section.menu-section.style-three .menu-box .menu-holder {
+        margin-bottom: 40px; }
+        section.menu-section.style-three .menu-box .menu-holder h2 {
+          font-size: 34px; }
+        section.menu-section.style-three .menu-box .menu-holder ul.menu-list li .menu-cont h4 span {
+          background: #f5f5f5; }
+  section.menu-section.style-four {
+    padding: 100px 0;
+    /*
+   * Set a counter and get the length of the image path.
+   */
+    /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+    /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+    /*
+     * Set a base background for 1x environments.
+     */
+    background: #111 url("../upload/banners/ban13.jpg") center center no-repeat;
+    background-size: cover;
+    /*
+     * Create an @2x-ish media query.
+     */
+    /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+    /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+      section.menu-section.style-four {
+        background: #111 url("../upload/banners/ban13@2x.jpg") center center no-repeat;
+        background-size: cover; } }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      section.menu-section.style-four {
+        background: #111 url("../upload/banners/ban13@2x.jpg") center center no-repeat;
+        background-size: cover; } }
+    section.menu-section.style-four .menu-box {
+      margin: 0; }
+      section.menu-section.style-four .menu-box .menu-holder {
+        margin-bottom: 40px; }
+        section.menu-section.style-four .menu-box .menu-holder h2 {
+          font-size: 34px;
+          color: #fff;
+          border-bottom-color: #666666; }
+        section.menu-section.style-four .menu-box .menu-holder ul.menu-list li .menu-cont h4 {
+          color: #ffffff;
+          border-bottom: none; }
+          section.menu-section.style-four .menu-box .menu-holder ul.menu-list li .menu-cont h4 span {
+            background: transparent; }
+            section.menu-section.style-four .menu-box .menu-holder ul.menu-list li .menu-cont h4 span.price {
+              color: #ea462b; }
+        section.menu-section.style-four .menu-box .menu-holder ul.menu-list li .menu-cont p {
+          color: #ffffff;
+        }
+
+/*------------------------------------------------- */
+/* =  Testimonial section */
+/*------------------------------------------------- */
+section.testimonial-section {
+  padding: 100px 0;
+  /*
+   * Set a counter and get the length of the image path.
+   */
+  /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+  /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+  /*
+     * Set a base background for 1x environments.
+     */
+  background: #111 url("../upload/banners/ban6.jpg") center center no-repeat;
+  background-size: cover;
+  /*
+     * Create an @2x-ish media query.
+     */
+  /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+  /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    section.testimonial-section {
+      background: #111 url("../upload/banners/ban6@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    section.testimonial-section {
+      background: #111 url("../upload/banners/ban6@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  section.testimonial-section.white-bg {
+    background: #ffffff; }
+  section.testimonial-section.second-bg {
+    /*
+   * Set a counter and get the length of the image path.
+   */
+    /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+    /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+    /*
+     * Set a base background for 1x environments.
+     */
+    background: #111 url("../upload/banners/1.jpg") center center no-repeat;
+    background-size: cover;
+    /*
+     * Create an @2x-ish media query.
+     */
+    /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+    /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+      section.testimonial-section.second-bg {
+        background: #111 url("../upload/banners/1@2x.jpg") center center no-repeat;
+        background-size: cover; } }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      section.testimonial-section.second-bg {
+        background: #111 url("../upload/banners/1@2x.jpg") center center no-repeat;
+        background-size: cover; } }
+  section.testimonial-section .testimonial-box {
+    margin: 0 -15px; }
+  section.testimonial-section .testimonial-post {
+    padding: 30px 50px;
+    margin: 0 15px;
+    background: #ffffff;
+    text-align: center; }
+    section.testimonial-section .testimonial-post img {
+      max-width: 60px;
+      height: auto;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      margin-bottom: 15px; }
+    section.testimonial-section .testimonial-post h3 {
+      margin-bottom: 0px; }
+    section.testimonial-section .testimonial-post span {
+      font-family: "Zilla Slab", serif;
+      font-weight: 400;
+      color: #000000;
+      font-size: 16px;
+      display: block;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #e1e1e1; }
+    section.testimonial-section .testimonial-post p {
+      font-family: "Zilla Slab", serif;
+      font-style: italic;
+      font-size: 20px;
+      margin: 0;
+      color: #000000; }
+  section.testimonial-section .owl-pagination {
+    padding-top: 20px; }
+    section.testimonial-section .owl-pagination .owl-page span {
+      width: 10px;
+      height: 10px; }
+  section.testimonial-section .owl-theme .owl-controls .owl-page.active span,
+  section.testimonial-section .owl-theme .owl-controls.clickable .owl-page:hover span {
+    background: #ea462b;
+    border-color: #ea462b; }
+  section.testimonial-section .owl-buttons {
+    display: none; }
+
+/*------------------------------------------------- */
+/* =  Gallery section */
+/*------------------------------------------------- */
+section.gallery-section {
+  display: flex; }
+  section.gallery-section a img {
+    max-width: 100%;
+    height: auto; }
+  section.gallery-section a:hover {
+    opacity: 0.94; }
+  @media (max-width: 768px) {
+    section.gallery-section {
+      flex-wrap: wrap; }
+      section.gallery-section a {
+        width: 50%; } }
+
+/*------------------------------------------------- */
+/* =  News section */
+/*------------------------------------------------- */
+section.news-section {
+  padding: 100px 0;
+  /*
+   * Set a counter and get the length of the image path.
+   */
+  /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+  /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+  /*
+     * Set a base background for 1x environments.
+     */
+  background: #111 url("../upload/banners/ban7.jpg") center center no-repeat;
+  background-size: cover;
+  /*
+     * Create an @2x-ish media query.
+     */
+  /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+  /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    section.news-section {
+      background: #111 url("../upload/banners/ban7@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    section.news-section {
+      background: #111 url("../upload/banners/ban7@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  section.news-section.white-bg {
+    background: #ffffff; }
+    section.news-section.white-bg .news-box .news-post {
+      border: 1px solid #ebebeb; }
+    section.news-section.white-bg .news-box .center-button {
+      padding-top: 20px; }
+      section.news-section.white-bg .news-box .center-button a {
+        color: #000000; }
+        section.news-section.white-bg .news-box .center-button a:hover {
+          color: #ffffff; }
+  section.news-section .news-box .news-post {
+    background: #ffffff;
+    margin-bottom: 30px; }
+    section.news-section .news-box .news-post img {
+      width: 100%;
+      height: auto; }
+    section.news-section .news-box .news-post .news-content {
+      padding: 35px 40px;
+      text-align: center; }
+      section.news-section .news-box .news-post .news-content h3 a {
+        color: #000000; }
+        section.news-section .news-box .news-post .news-content h3 a:hover {
+          color: #ea462b; }
+      section.news-section .news-box .news-post .news-content p.auth-paragraph {
+        padding-top: 25px;
+        margin: 30px 15px 0;
+        font-family: "Zilla Slab", serif;
+        border-top: 1px solid #e1e1e1; }
+        section.news-section .news-box .news-post .news-content p.auth-paragraph a {
+          color: #000000; }
+          section.news-section .news-box .news-post .news-content p.auth-paragraph a:hover {
+            color: #ea462b; }
+  section.news-section .news-box .center-button {
+    padding-top: 20px; }
+    section.news-section .news-box .center-button a {
+      color: #ffffff; }
+  section.news-section.blog-page {
+    background: #ffffff;
+    padding-top: 0;
+    padding-bottom: 50px; }
+    section.news-section.blog-page .news-box .news-post {
+      border: 1px solid #ebebeb; }
+      section.news-section.blog-page .news-box .news-post .news-content {
+        text-align: left; }
+        section.news-section.blog-page .news-box .news-post .news-content h3 {
+          margin-bottom: 0px; }
+        section.news-section.blog-page .news-box .news-post .news-content span.category {
+          display: block;
+          color: #ea462b;
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 15px; }
+        section.news-section.blog-page .news-box .news-post .news-content p.auth-paragraph {
+          margin: 30px 0 0; }
+          section.news-section.blog-page .news-box .news-post .news-content p.auth-paragraph:before {
+            content: "";
+            background: url("../images/icon3.png") no-repeat;
+            background-size: contain;
+            width: 32px;
+            height: 30px;
+            opacity: 0.2;
+            margin-top: 2px;
+            float: left;
+            display: inline-block;
+            margin-right: 12px; }
+
+.pagination-list-box {
+  margin-bottom: 40px;
+  padding-top: 40px;
+  overflow: hidden; }
+  .pagination-list-box a.prev,
+  .pagination-list-box a.next {
+    color: #000000;
+    font-size: 14px;
+    font-family: "Lato", sans-serif; }
+    .pagination-list-box a.prev i,
+    .pagination-list-box a.next i {
+      font-size: 10px; }
+  .pagination-list-box a.prev {
+    margin-right: 10px; }
+    .pagination-list-box a.prev i {
+      margin-right: 7px; }
+  .pagination-list-box a.next i {
+    margin-left: 7px; }
+  .pagination-list-box a.prev:hover,
+  .pagination-list-box a.next:hover {
+    color: #ea462b; }
+  .pagination-list-box ul.pages-list {
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center; }
+    .pagination-list-box ul.pages-list li {
+      display: inline-block; }
+      .pagination-list-box ul.pages-list li a {
+        width: 46px;
+        height: 46px;
+        text-align: center;
+        color: #000000;
+        font-family: "Lato", sans-serif;
+        font-size: 14px;
+        line-height: 44px;
+        border: 1px solid transparent; }
+      .pagination-list-box ul.pages-list li a:hover,
+      .pagination-list-box ul.pages-list li a.active {
+        color: #ea462b;
+        border-color: #ebebeb; }
+
+/*------------------------------------------------- */
+/* =  Sidebar */
+/*------------------------------------------------- */
+.sidebar {
+  padding-left: 40px; }
+  @media (max-width: 991px) {
+    .sidebar {
+      padding-left: 0;
+      margin-top: 50px; } }
+  .sidebar .widget {
+    margin-bottom: 40px; }
+    .sidebar .widget > h3 {
+      padding-bottom: 15px;
+      margin-bottom: 17px;
+      border-bottom: 1px solid #eeeeee; }
+  .sidebar .search-widget input[type="search"] {
+    margin: 0;
+    padding: 10px 20px;
+    border: 1px solid #d7d7d7;
+    width: 100%;
+    outline: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Lato", sans-serif;
+    background: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out; }
+  .sidebar .search-widget button {
+    background: transparent;
+    border: none;
+    float: right;
+    margin-top: -34px;
+    margin-right: 14px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer; }
+  .sidebar .search-widget button i {
+    color: #000000;
+    font-size: 18px; }
+  .sidebar .text-widget p {
+    margin-bottom: 0; }
+  .sidebar .category-widget ul li {
+    display: block;
+    margin-bottom: 8px; }
+    .sidebar .category-widget ul li a {
+      color: #000000;
+      font-size: 18px;
+      font-family: "Zilla Slab", serif;
+      font-weight: 400;
+      display: block; }
+      .sidebar .category-widget ul li a span {
+        float: right;
+        color: #ffffff; }
+    .sidebar .category-widget ul li a:before {
+      float: left;
+      color: #ffffff;
+      content: '\f054';
+      font-family: 'FontAwesome';
+      font-size: 7px;
+      margin-right: 15px;
+      margin-top: 10px; }
+    .sidebar .category-widget ul li a:hover {
+      color: #ea462b; }
+  .sidebar .category-widget ul li:last-child {
+    margin-bottom: 0; }
+  .sidebar .popular-widget ul.popular-list {
+    padding-top: 6px; }
+    .sidebar .popular-widget ul.popular-list li {
+      list-style: none;
+      overflow-y: hidden;
+      margin-bottom: 20px; }
+      .sidebar .popular-widget ul.popular-list li img {
+        float: left;
+        max-width: 70px; }
+      .sidebar .popular-widget ul.popular-list li .side-content {
+        margin-left: 90px;
+        padding-top: 4px; }
+        .sidebar .popular-widget ul.popular-list li .side-content h4 {
+          line-height: 20px;
+          font-weight: 600;
+          margin-bottom: 3px; }
+          .sidebar .popular-widget ul.popular-list li .side-content h4 a {
+            color: #000000; }
+          .sidebar .popular-widget ul.popular-list li .side-content h4 a:hover {
+            color: #ea462b; }
+        .sidebar .popular-widget ul.popular-list li .side-content span {
+          display: inline-block;
+          margin: 0;
+          color: #000000;
+          font-size: 16px;
+          font-family: "Lato", sans-serif;
+          font-weight: 400; }
+    .sidebar .popular-widget ul.popular-list li:last-child {
+      margin-bottom: 0; }
+
+/*------------------------------------------------- */
+/* =  Single post */
+/*------------------------------------------------- */
+div.single-post {
+  border: 1px solid #e1e1e1; }
+  div.single-post img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px; }
+  div.single-post .post-content {
+    padding: 0 70px 30px; }
+    @media (max-width: 991px) {
+      div.single-post .post-content {
+        padding: 0 30px 30px; } }
+    div.single-post .post-content p {
+      margin-bottom: 20px; }
+    div.single-post .post-content p.auth-paragraph {
+      padding-bottom: 25px;
+      margin-bottom: 15px;
+      font-family: "Zilla Slab", serif;
+      border-bottom: 1px solid #e1e1e1; }
+      div.single-post .post-content p.auth-paragraph a {
+        color: #000000; }
+        div.single-post .post-content p.auth-paragraph a:hover {
+          color: #ea462b; }
+    div.single-post .post-content h2 {
+      font-size: 34px; }
+    div.single-post .post-content blockquote {
+      padding: 10px 0 10px 80px;
+      background: url("../upload/blog/quote.jpg") 0 18px no-repeat; }
+      div.single-post .post-content blockquote p {
+        color: #000000;
+        font-size: 22px;
+        line-height: 30px;
+        font-weight: 600;
+        font-style: italic;
+        font-family: "Zilla Slab", serif;
+        margin: 0; }
+    div.single-post .post-content .single-post__tags {
+      margin: 20px 0; }
+      div.single-post .post-content .single-post__tags a {
+        color: #000000;
+        margin-right: 4px; }
+      div.single-post .post-content .single-post__tags a:hover {
+        color: #ea462b;
+        text-decoration: underline !important; }
+    div.single-post .post-content .single-post__share-list {
+      margin: 20px 0;
+      text-align: right;
+      color: #000000; }
+      @media (max-width: 991px) {
+        div.single-post .post-content .single-post__share-list {
+          text-align: left;
+          margin-top: 0; } }
+      div.single-post .post-content .single-post__share-list a {
+        font-size: 16px;
+        margin-left: 10px; }
+      div.single-post .post-content .single-post__share-list a.twitter i {
+        color: #5ab4d6; }
+      div.single-post .post-content .single-post__share-list a.facebook i {
+        color: #5252d4; }
+      div.single-post .post-content .single-post__share-list a.pinterest i {
+        color: #d74040; }
+      div.single-post .post-content .single-post__share-list a:hover {
+        opacity: 0.7; }
+
+.other-posts {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  position: relative; }
+  .other-posts__prev, .other-posts__next {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    padding: 20px 0; }
+    .other-posts__prev i, .other-posts__next i {
+      font-size: 12px;
+      color: #999999;
+      transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out; }
+    .other-posts__prev img, .other-posts__next img {
+      max-width: 70px;
+      height: auto; }
+  .other-posts__prev:hover i, .other-posts__next:hover i {
+    color: #ea462b; }
+  .other-posts__next {
+    text-align: right;
+    flex-direction: row-reverse; }
+  .other-posts__prev {
+    border-right: 1px solid #e1e1e1; }
+    .other-posts__prev i, .other-posts__prev img {
+      margin-right: 16px; }
+  .other-posts__next i, .other-posts__next img {
+    margin-left: 16px; }
+  .other-posts__desc {
+    margin-bottom: 0; }
+  .other-posts__title {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 0; }
+    .other-posts__title:hover {
+      color: #ea462b; }
+  @media (max-width: 991px) {
+    .other-posts {
+      display: block; }
+      .other-posts__prev, .other-posts__next {
+        width: auto;
+        max-width: 340px;
+        margin: 0 auto; }
+      .other-posts__prev {
+        border-right: none; } }
+
+.comment-area-box {
+  margin-bottom: 30px; }
+  .comment-area-box h3 {
+    margin-bottom: 30px; }
+  .comment-area-box > ul {
+    border-top: 1px solid #e1e1e1; }
+    .comment-area-box > ul li {
+      list-style: none;
+      padding: 25px;
+      border: 1px solid #e1e1e1;
+      border-top: none;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 3px; }
+      .comment-area-box > ul li .comment-box {
+        overflow: hidden; }
+        .comment-area-box > ul li .comment-box img {
+          max-width: 40px;
+          float: left;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          -ms-border-radius: 3px;
+          border-radius: 3px; }
+        .comment-area-box > ul li .comment-box .comment-content {
+          margin-left: 70px; }
+          .comment-area-box > ul li .comment-box .comment-content h4 {
+            color: #000000;
+            font-weight: 600;
+            margin: 0; }
+          .comment-area-box > ul li .comment-box .comment-content span, .comment-area-box > ul li .comment-box .comment-content a {
+            font-size: 14px;
+            color: #000000;
+            font-family: "Lato", sans-serif;
+            display: inline-block;
+            font-weight: 400; }
+            .comment-area-box > ul li .comment-box .comment-content span i, .comment-area-box > ul li .comment-box .comment-content a i {
+              color: #000000;
+              margin-right: 8px;
+              font-size: 10px; }
+          .comment-area-box > ul li .comment-box .comment-content a, .comment-area-box > ul li .comment-box .comment-content span.date-comm {
+            float: right;
+            margin-left: 5px;
+            margin-top: -20px; }
+          .comment-area-box > ul li .comment-box .comment-content a:hover {
+            color: #000000;
+            text-decoration: underline !important; }
+          .comment-area-box > ul li .comment-box .comment-content p {
+            margin-bottom: 0px;
+            margin-top: 6px; }
+
+.contact-form {
+  margin-bottom: 20px; }
+  .contact-form h3 {
+    margin-bottom: 30px; }
+  .contact-form__input-text, .contact-form__textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    color: #000000;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background: #ffffff;
+    outline: none;
+    border: 1px solid #dddddd;
+    margin: 0 0 30px;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out; }
+  .contact-form__input-text:hover, .contact-form__textarea:hover {
+    border-color: #ea462b; }
+  .contact-form__textarea {
+    height: 140px; }
+  .contact-form__submit {
+    padding: 12px 20px;
+    color: #ea462b;
+    font-size: 18px;
+    font-weight: 600;
+    background: transparent;
+    border: 1px solid #ea462b;
+    font-family: "Zilla Slab", serif;
+    outline: none;
+    margin: 0;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out; }
+  .contact-form__submit:hover {
+    color: #ffffff;
+    background: #ea462b; }
+
+#msg {
+  padding: 0.75rem 1.5rem;
+  margin-top: 0.625rem; }
+
+/*------------------------------------------------- */
+/* =  About section */
+/*------------------------------------------------- */
+section.about-section {
+  padding: 50px 0 70px; }
+  section.about-section .about-box {
+    margin-bottom: 80px; }
+    section.about-section .about-box .row {
+      align-items: center; }
+    section.about-section .about-box .image-holder {
+      padding: 0 15px; }
+      section.about-section .about-box .image-holder img {
+        width: 100%;
+        height: auto; }
+      @media (max-width: 991px) {
+        section.about-section .about-box .image-holder {
+          margin-bottom: 30px; } }
+    section.about-section .about-box .content-holder h2 {
+      margin-bottom: 0; }
+      section.about-section .about-box .content-holder h2 span {
+        font-style: italic;
+        color: #ea462b; }
+    section.about-section .about-box .content-holder > span {
+      display: inline-block;
+      margin-bottom: 20px; }
+    section.about-section .about-box .content-holder p {
+      margin-bottom: 15px; }
+    section.about-section .about-box .content-holder img {
+      margin-right: 10px;
+      margin-top: 20px; }
+  section.about-section.more-padd {
+    padding-top: 100px;
+    padding-bottom: 30px; }
+
+.statistic-box .statistic-post {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 0 50px; }
+  .statistic-box .statistic-post h2 {
+    margin-bottom: 2px; }
+  .statistic-box .statistic-post p {
+    font-size: 18px;
+    font-family: "Zilla Slab", serif; }
+  .statistic-box .statistic-post:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -15px;
+    width: 1px;
+    height: 100%;
+    background: #e1e1e1; }
+  .statistic-box .statistic-post.no-border:after {
+    display: none; }
+  @media (max-width: 991px) {
+    .statistic-box .statistic-post:after {
+      display: none; } }
+
+.about-box .statistic-box {
+  padding-top: 20px; }
+  .about-box .statistic-box .statistic-post {
+    padding: 0; }
+    .about-box .statistic-box .statistic-post:after {
+      right: -5px; }
+
+section.team-section {
+  padding: 70px 0;
+  /*
+   * Set a counter and get the length of the image path.
+   */
+  /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+  /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+  /*
+     * Set a base background for 1x environments.
+     */
+  background: #111 url("../upload/banners/ban6.jpg") center center no-repeat;
+  background-size: cover;
+  /*
+     * Create an @2x-ish media query.
+     */
+  /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+  /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    section.team-section {
+      background: #111 url("../upload/banners/ban6@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    section.team-section {
+      background: #111 url("../upload/banners/ban6@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  section.team-section .team-box .team-post {
+    background: #fff;
+    margin-bottom: 30px;
+    text-align: center; }
+    section.team-section .team-box .team-post img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 25px; }
+    section.team-section .team-box .team-post h3 {
+      margin-bottom: 0; }
+    section.team-section .team-box .team-post span {
+      display: inline-block;
+      font-size: 16px;
+      margin-bottom: 15px; }
+    section.team-section .team-box .team-post ul.social-team {
+      max-width: 230px;
+      margin: 0 auto;
+      padding: 20px 0;
+      border-top: 1px solid #e1e1e1; }
+      section.team-section .team-box .team-post ul.social-team li {
+        display: inline-block;
+        margin: 0 5px; }
+        section.team-section .team-box .team-post ul.social-team li a {
+          color: #000000;
+          font-size: 14px; }
+          section.team-section .team-box .team-post ul.social-team li a:hover {
+            color: #ea462b; }
+
+/*------------------------------------------------- */
+/* =  Contact */
+/*------------------------------------------------- */
+#map {
+  width: 100%;
+  height: 347px; }
+
+section.contact-section .title-section {
+  margin-bottom: 50px; }
+
+section.contact-section .title-section h3 {
+  margin-bottom: 10px; }
+
+section.contact-section .contact-box {
+  padding: 60px 0;
+  border-top: 1px solid #e1e1e1; }
+  section.contact-section .contact-box h3 {
+    margin-bottom: 20px; }
+
+section.contact-section .open-info {
+  padding-bottom: 40px;
+  margin-bottom: 35px;
+  border-bottom: 1px solid #e1e1e1; }
+  section.contact-section .open-info .info-line {
+    display: flex; }
+    section.contact-section .open-info .info-line i {
+      display: inline-block;
+      width: 40px;
+      color: #ea462b;
+      font-size: 20px;
+      line-height: 30px; }
+    section.contact-section .open-info .info-line p {
+      color: #000000;
+      line-height: 28px; }
+      section.contact-section .open-info .info-line p span {
+        font-weight: 700; }
+
+section.contact-section .contact-info p {
+  margin-bottom: 5px; }
+  section.contact-section .contact-info p i {
+    color: #000000;
+    margin-right: 10px;
+    width: 20px;
+    font-size: 15px;
+    display: inline-block;
+    text-align: center;
+    color: #ea462b; }
+
+@media (max-width: 991px) {
+  section.contact-section .contact-info {
+    margin-bottom: 50px; } }
+
+#contact-form,
+#reservation-form {
+  margin: 0; }
+  #contact-form label,
+  #reservation-form label {
+    display: block;
+    color: #000000;
+    font-size: 18px;
+    font-family: "Zilla Slab", serif;
+    font-weight: 600;
+    margin: 0 0 12px; }
+  #contact-form input[type="text"],
+  #contact-form textarea,
+  #reservation-form input[type="text"],
+  #reservation-form textarea {
+    width: 100%;
+    padding: 10px 20px;
+    background: transparent;
+    color: #000000;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    border: 1px solid #e1e1e1;
+    margin: 0 0 20px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out; }
+  #contact-form input[type="text"]:focus,
+  #contact-form textarea:focus,
+  #reservation-form input[type="text"]:focus,
+  #reservation-form textarea:focus {
+    border: 1px solid #ea462b; }
+  #contact-form textarea,
+  #reservation-form textarea {
+    height: 100px;
+    margin-bottom: 30px; }
+  #contact-form input[type="submit"],
+  #reservation-form input[type="submit"] {
+    padding: 10px 30px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    background: #ea462b;
+    border: 1px solid #ea462b;
+    font-family: "Zilla Slab", serif;
+    outline: none;
+    margin: 0;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out; }
+  #contact-form input[type="submit"]:hover,
+  #reservation-form input[type="submit"]:hover {
+    color: #ea462b;
+    background: #ffffff; }
+
+section.contact-section2 {
+  padding: 70px 0; }
+  section.contact-section2 .contact-info {
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ebebeb; }
+    section.contact-section2 .contact-info .info-post {
+      margin-bottom: 50px; }
+      section.contact-section2 .contact-info .info-post span {
+        display: inline-block;
+        float: left;
+        width: 60px;
+        height: 60px;
+        border: 1px solid rgba(234, 70, 43, 0.7);
+        line-height: 58px;
+        color: #ea462b;
+        font-size: 26px;
+        text-align: center;
+        margin: 10px 5px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        position: relative; }
+        section.contact-section2 .contact-info .info-post span i {
+          position: relative;
+          z-index: 2; }
+        section.contact-section2 .contact-info .info-post span:after {
+          content: '';
+          top: -10px;
+          left: -10px;
+          bottom: -10px;
+          right: -10px;
+          position: absolute;
+          border: 1px solid #ea462b;
+          opacity: 0.3;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%; }
+        section.contact-section2 .contact-info .info-post span:hover {
+          background: #ea462b;
+          color: #fff; }
+        section.contact-section2 .contact-info .info-post span:hover:after {
+          background: #ea462b;
+          animation-name: bordermove;
+          animation-duration: 0.8s;
+          animation-timing-function: ease-out;
+          animation-delay: 0s;
+          animation-direction: alternate;
+          animation-iteration-count: infinite;
+          animation-fill-mode: none;
+          animation-play-state: running; }
+
+@keyframes bordermove {
+  0% {
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px; }
+  100% {
+    top: -10px;
+    left: -10px;
+    bottom: -10px;
+    right: -10px; } }
+      section.contact-section2 .contact-info .info-post .info-content {
+        margin-left: 100px; }
+        section.contact-section2 .contact-info .info-post .info-content h2 {
+          margin-bottom: 5px; }
+  section.contact-section2 .title-section {
+    margin-bottom: 30px;
+    margin-top: 10px; }
+    section.contact-section2 .title-section span {
+      margin-bottom: 0; }
+
+/*------------------------------------------------- */
+/* =  Book section */
+/*------------------------------------------------- */
+section.book-section {
+  padding: 100px 0;
+  /*
+   * Set a counter and get the length of the image path.
+   */
+  /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+  /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+  /*
+     * Set a base background for 1x environments.
+     */
+  background: #111 url("../upload/banners/ban8.jpg") center center no-repeat;
+  background-size: cover;
+  /*
+     * Create an @2x-ish media query.
+     */
+  /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+  /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    section.book-section {
+      background: #111 url("../upload/banners/ban8@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    section.book-section {
+      background: #111 url("../upload/banners/ban8@2x.jpg") center center no-repeat;
+      background-size: cover; } }
+  section.book-section.bg-second {
+    /*
+   * Set a counter and get the length of the image path.
+   */
+    /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+    /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+    /*
+     * Set a base background for 1x environments.
+     */
+    background: #111 url("../upload/banners/ban11.jpg") center center no-repeat;
+    background-size: cover;
+    /*
+     * Create an @2x-ish media query.
+     */
+    /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+    /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+      section.book-section.bg-second {
+        background: #111 url("../upload/banners/ban11@2x.jpg") center center no-repeat;
+        background-size: cover; } }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      section.book-section.bg-second {
+        background: #111 url("../upload/banners/ban11@2x.jpg") center center no-repeat;
+        background-size: cover; } }
+  section.book-section .title-section span {
+    color: #ffffff;
+    font-weight: 600; }
+  section.book-section #reservation-form label {
+    color: #ffffff;
+    font-weight: 600; }
+  section.book-section #reservation-form input[type="text"] {
+    background: #ffffff;
+    border-color: transparent; }
+  section.book-section #reservation-form input[type="submit"] {
+    margin-top: 38px; }
+    section.book-section #reservation-form input[type="submit"]:hover {
+      background: #ea462b;
+      color: #fff;
+      opacity: 0.85; }
+
+/*------------------------------------------------- */
+/* =  Footer */
+/*------------------------------------------------- */
+footer {
+  padding-top: 70px;
+  background: #f8f8f9; }
+  footer .up-footer {
+    padding-bottom: 0px; }
+    footer .up-footer .footer-widget {
+      margin-bottom: 50px; }
+      footer .up-footer .footer-widget h3 {
+        margin-bottom: 15px; }
+      footer .up-footer .footer-widget img {
+        margin-bottom: 20px; }
+      footer .up-footer .footer-widget p {
+        margin-bottom: 20px; }
+        footer .up-footer .footer-widget p i {
+          margin-right: 4px; }
+      footer .up-footer .footer-widget ul.social-list li {
+        display: inline-block;
+        margin-right: 10px; }
+        footer .up-footer .footer-widget ul.social-list li a {
+          color: #000000; }
+          footer .up-footer .footer-widget ul.social-list li a:hover {
+            color: #ea462b; }
+    footer .up-footer .contact-widget p {
+      margin-bottom: 5px; }
+      footer .up-footer .contact-widget p i {
+        color: #000000;
+        margin-right: 10px;
+        width: 20px; }
+    footer .up-footer form {
+      margin: 0; }
+      footer .up-footer form input[type="text"] {
+        width: 100%;
+        padding: 12px 20px;
+        background: #ffffff;
+        border: 1px solid #e1e1e1;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0;
+        margin: 0;
+        color: #000000;
+        font-size: 15px;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        outline: none; }
+      footer .up-footer form button {
+        background: #ea462b;
+        color: #ffffff;
+        font-size: 18px;
+        font-family: "Zilla Slab", serif;
+        font-weight: 600;
+        outline: none;
+        border: none;
+        float: right;
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        border-radius: 0px;
+        padding: 11px 24px 10px;
+        margin: -48px 0 0;
+        transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out; }
+        footer .up-footer form button:hover {
+          opacity: 0.7; }
+  footer p.copyright-line {
+    padding: 20px 0;
+    border-top: 1px solid #ebebeb;
+    margin: 0; }
+  footer a.go-top {
+    float: right;
+    color: #000000;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    margin-top: -40px; }
+  footer.dark-style {
+    background: #252428; }
+    footer.dark-style .up-footer .footer-widget h3 {
+      color: #ffffff; }
+    footer.dark-style .up-footer .footer-widget ul.social-list li a {
+      color: #ffffff; }
+      footer.dark-style .up-footer .footer-widget ul.social-list li a:hover {
+        color: #ea462b; }
+    footer.dark-style .up-footer .footer-widget.contact-widget p i {
+      color: #ffffff; }
+    footer.dark-style p.copyright-line {
+      border-top-color: #4c4c4d; }
+      footer.dark-style p,
+      footer.dark-style a.go-top {
+        color: #ffffff;
+      }

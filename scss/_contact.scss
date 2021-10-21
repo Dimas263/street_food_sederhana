@@ -1,0 +1,237 @@
+
+/*------------------------------------------------- */
+/* =  Contact */
+/*------------------------------------------------- */
+
+#map {
+	width: 100%;
+	height: 347px;
+}
+
+section.contact-section {
+	.title-section {
+		margin-bottom: 50px;
+	}
+	.title-section h3 {
+		margin-bottom: 10px;
+	}
+	.contact-box {
+		padding: 60px 0;
+		border-top: 1px solid #e1e1e1;
+		h3 {
+			margin-bottom: 20px;
+		}
+	}
+	.open-info {
+		padding-bottom: 40px;
+		margin-bottom: 35px;
+		border-bottom: 1px solid #e1e1e1;
+		.info-line {
+			display: flex;
+			i {
+				display: inline-block;
+				width: 40px;
+				color: $primary-color;
+				font-size: 20px;
+				line-height: 30px;
+			}
+			p {
+				color: $title-color;
+				line-height: 28px;
+				span {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	.contact-info {
+		p {
+			margin-bottom: 5px;
+			i {
+				color: $text-color;
+				margin-right: 10px;
+				width: 20px;
+				font-size: 15px;
+				display: inline-block;
+				text-align: center;
+				color: $primary-color;
+			}
+		}
+		@include tablets {
+			margin-bottom: 50px;
+		}
+	}
+}
+
+#contact-form,
+#reservation-form {
+	margin: 0;
+	label {
+		display: block;
+		color: $title-color;
+		font-size: 18px;
+		font-family: $font-default;
+		font-weight: 600;
+		margin: 0 0 12px;
+	}
+	input[type="text"],
+	textarea {
+		width: 100%;
+		padding: 10px 20px;
+		background: transparent;
+		color: $text-color;
+		font-family: $font-alternative;
+		font-size: 16px;
+		font-weight: 400;
+		outline: none;
+		border: 1px solid #e1e1e1;
+		margin: 0 0 20px;
+		@include border-radius(0px);
+		@include transition(0.2s);
+	}
+	input[type="text"]:focus,
+	textarea:focus {
+		border: 1px solid $primary-color;
+	}
+	textarea {
+		height: 100px;
+		margin-bottom: 30px;
+	}
+	input[type="submit"] {
+		padding: 10px 30px;
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 600;
+		background: $primary-color;
+		border: 1px solid $primary-color;
+		font-family: $font-default;
+		outline: none;
+		margin: 0;
+		cursor: pointer;
+		@include transition(0.2s);
+	}
+	input[type="submit"]:hover {
+		color: $primary-color;
+		background: #ffffff;
+	}
+}
+
+section.contact-section2 {
+	padding: 70px 0;
+	.contact-info {
+		margin-bottom: 50px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #ebebeb;
+		.info-post {
+			margin-bottom: 50px;
+			span {
+				display: inline-block;
+				float: left;
+				width: 60px;
+				height: 60px;
+				border: 1px solid $primary-color-trans;
+				line-height: 58px;
+				color: $primary-color;
+				font-size: 26px;
+				text-align: center;
+				margin: 10px 5px;
+				@include border-radius(50%);
+				position: relative;
+				i {
+					position: relative;
+					z-index: 2;
+				}
+				&:after {
+					content: '';
+					top: -10px;
+					left: -10px;
+					bottom: -10px;
+					right: -10px;
+					position: absolute;
+					border: 1px solid $primary-color;
+					opacity: 0.3;
+					@include border-radius(50%);
+				}
+				&:hover {
+					background: $primary-color;
+					color: #fff;
+				}
+				&:hover:after {
+					background: $primary-color;
+					animation-name: bordermove;
+					animation-duration: 0.8s; 
+					animation-timing-function: ease-out; 
+					animation-delay: 0s;
+					animation-direction: alternate;
+					animation-iteration-count: infinite;
+					animation-fill-mode: none;
+					animation-play-state: running; 
+				}
+				@keyframes bordermove {
+					0% {
+						top: 0px;
+						left: 0px;
+						bottom: 0px;
+						right: 0px;
+					}
+					100% {
+						top: -10px;
+						left: -10px;
+						bottom: -10px;
+						right: -10px;
+					}
+				}
+			}
+			.info-content {
+				margin-left: 100px;
+				h2 {
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+	.title-section {
+		margin-bottom: 30px;
+		margin-top: 10px;
+		span {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/*------------------------------------------------- */
+/* =  Book section */
+/*------------------------------------------------- */
+
+section.book-section {
+	padding: 100px 0;
+	@include retina('../upload/banners/ban8.jpg', 2, cover, center center no-repeat);
+	&.bg-second {
+		@include retina('../upload/banners/ban11.jpg', 2, cover, center center no-repeat);
+	}
+	.title-section {
+		span {
+			color: #cccccc;
+			font-weight: 600;
+		}
+	}
+
+	#reservation-form {
+		label {
+			color: #ffffff;
+			font-weight: 600;
+		}
+		input[type="text"] {
+			background: #ffffff;
+			border-color: transparent;
+		}
+		input[type="submit"] {
+			margin-top: 38px;
+			&:hover {
+				background: $primary-color;
+				color: #fff;
+				opacity: 0.85;
+			}
+		}
+	}
+}

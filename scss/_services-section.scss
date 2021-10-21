@@ -1,0 +1,25 @@
+/*------------------------------------------------- */
+/* =  Services section */
+/*------------------------------------------------- */
+
+section.services-section {
+    .services-box {
+        padding: 65px 0 40px;
+        border-top: 1px solid #ebebeb;
+        .services-post {
+            text-align: center;
+            padding: 0 20px;
+            margin-bottom: 30px;
+            img {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &.border-btm {
+        .services-box {
+            padding: 80px 0;
+            border-top: none;
+            border-bottom: 1px solid #ebebeb;
+        }
+    }
+}

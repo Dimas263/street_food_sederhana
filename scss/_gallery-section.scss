@@ -1,0 +1,22 @@
+/*------------------------------------------------- */
+/* =  Gallery section */
+/*------------------------------------------------- */
+
+section.gallery-section {
+    display: flex;
+    a {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        &:hover {
+            opacity: 0.94;
+        }
+    }
+    @include mobile {
+        flex-wrap: wrap;
+        a {
+            width: 50%;
+        }
+    }
+}

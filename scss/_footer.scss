@@ -1,0 +1,128 @@
+
+
+/*------------------------------------------------- */
+/* =  Footer */
+/*------------------------------------------------- */
+
+footer {
+	padding-top: 70px;
+	background: #f8f8f9;
+	.up-footer {
+		padding-bottom: 0px;
+		.footer-widget {
+			margin-bottom: 50px;
+			h3 {
+				margin-bottom: 15px;
+			}
+			img {
+				margin-bottom: 20px;
+			}
+			p {
+				i {
+					margin-right: 4px;
+				}
+				margin-bottom: 20px;
+			}
+			ul.social-list {
+				@extend .reset-elem;
+				li {
+					display: inline-block;
+					margin-right: 10px;
+					a {
+						color: $title-color;
+						&:hover {
+							color: $primary-color;
+						}
+					}
+				}
+			}
+		}
+		.contact-widget {
+			p {
+				margin-bottom: 5px;
+				i {
+					color: $title-color;
+					margin-right: 10px;
+					width: 20px;
+				}
+			}
+		}
+		form {
+			margin: 0;
+			input[type="text"] {
+				width: 100%;
+				padding: 12px 20px;
+				background: #ffffff;
+				border: 1px solid #e1e1e1;
+				@include border-radius(0);
+				margin: 0;
+				color: $text-color;
+				font-size: 15px;
+				font-family: $font-alternative;
+				font-weight: 400;
+				outline: none;
+			}
+			button {
+				background: $primary-color;
+				color: #ffffff;
+				font-size: 18px;
+				font-family: $font-default;
+				font-weight: 600;
+				outline: none;
+				border: none;
+				float: right;
+				position: relative;
+				z-index: 2;
+				cursor: pointer;
+				@include border-radius(0px);
+				padding: 11px 24px 10px;
+				margin: -48px 0 0;
+				@include transition(0.2s);
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+	p.copyright-line {
+		padding: 20px 0;
+		border-top: 1px solid #ebebeb;
+		margin: 0;
+	}
+	a.go-top {
+		float: right;
+		color: $text-color;
+		text-transform: uppercase;
+		font-family: $font-alternative;
+		font-size: 13px;
+		margin-top: -40px;
+	}
+
+	&.dark-style {
+		background: #252428;
+		.up-footer .footer-widget {
+			h3 {
+				color: #ffffff;
+			}
+			ul.social-list {
+				li {
+					a {
+						color: #ffffff;
+						&:hover {
+							color: $primary-color;
+						}
+					}
+				}
+			}
+			&.contact-widget {
+				p i {
+					color: #666666;
+				}
+			}
+		}
+		p.copyright-line {
+			border-top-color: #4c4c4d;
+		}
+	}
+}
+

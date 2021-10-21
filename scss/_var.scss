@@ -1,0 +1,227 @@
+
+/*-------------------------------------------------
+ =  Table of Css
+
+ 1.basic style of template
+ 2.Header
+ 3.Isotope filtering
+ 4.Kenburn slider basic
+ 5.General
+ 6.banner sections
+ 7.popular menu Section
+ 8.services section
+ 9.menu section
+ 10.testimonial section
+ 11.gallery section
+ 12.news section
+ 13.Sidebar
+ 14.Single post
+ 15.about section
+ 16.contact
+ 17.Book section
+ 18.Footer
+-------------------------------------------------*/
+
+//the default font in our template - titles font
+$font-default: 'Zilla Slab', serif;
+
+// alternative font in our template - paragraphs font
+$font-alternative: 'Lato', sans-serif;
+
+//default color skin
+$primary-color: #ea462b;
+
+//default color skin with opacity
+$primary-color-trans: rgba(234, 70, 43, 0.7);
+
+//text color 1 (some titles)
+$title-color: #23292c;
+
+//text color 1 (some titles)
+$text-color: #777777;
+
+//reset element paddings and margins
+
+.reset-elem {
+    margin: 0;
+    padding: 0;
+}
+
+//default style for paragraphs in this template
+p, .paragraph {
+    font-size: 16px;
+    color: $text-color;
+    font-family: $font-alternative;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0 0 10px;
+}
+
+//default style for hading1 in this template
+h1, .heading1 {
+    color: $title-color;
+    font-size: 90px;
+    font-family: $font-default;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+
+//default style for hading2 in this template
+h2, .heading2 {
+    color: $title-color;
+    font-size: 50px;
+    font-family: $font-default;
+    font-weight: 600;
+    margin: 0 0 10px;
+    line-height: 56px;
+}
+
+//default style for hading2 in this template
+h3, .heading3 {
+    color: $title-color;
+    font-size: 22px;
+    font-family: $font-default;
+    font-weight: 600;
+    margin: 0 0 10px;
+    line-height: 28px;
+}
+
+//default style for hading2 in this template
+h4, .heading4 {
+    color: $text-color;
+    font-size: 18px;
+    font-family: $font-default;
+    font-weight: 400;
+    margin: 0 0 10px;
+    line-height: 28px;
+}
+
+//variable for radius corners
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//variable for radius corners
+@mixin border-bottom-left-radius($radius) {
+    -webkit-border-bottom-left-radius: $radius;
+    -moz-border-bottom-left-radius: $radius;
+    -o-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+
+//variable for radius corners
+@mixin border-bottom-right-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-bottom-right-radius: $radius;
+    -o-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+//variable for radius corners
+@mixin border-top-left-radius($radius) {
+    -webkit-border-top-left-radius: $radius;
+    -moz-border-top-left-radius: $radius;
+    -o-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+}
+
+//variable for radius corners
+@mixin border-top-right-radius($radius) {
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-top-right-radius: $radius;
+    -o-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
+//variable for transitions
+@mixin transition($speed) {
+    transition: all $speed ease-in-out;
+    -moz-transition: all $speed ease-in-out;
+    -webkit-transition: all $speed ease-in-out;
+    -o-transition: all $speed ease-in-out;
+}
+
+//variable for tranform grow elem scale
+@mixin transform($scale) {
+    transform: scale($scale);
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -o-transform: scale($scale);
+}
+
+//box shadow  variable
+@mixin box-shadow($val) {
+    box-shadow: $val;
+    -webkit-box-shadow: $val;
+    -moz-box-shadow: $val;
+    -o-box-shadow: $val;
+}
+
+//animate transform rotate variable
+@mixin rotate($rotate) {
+    -webkit-transform: rotate($rotate);
+    -moz-transform: rotate($rotate);
+    -ms-transform: rotate($rotate);
+    -o-transform: rotate($rotate);
+    transform: rotate($rotate);
+}
+
+//animate transform scale & rotate variable
+@mixin rotate-scale($rotate, $scale) {
+    -webkit-transform: rotate($rotate) scale($scale);
+    -moz-transform: rotate($rotate) scale($scale);
+    -ms-transform: rotate($rotate) scale($scale);
+    -o-transform: rotate($rotate) scale($scale);
+    transform: rotate($rotate) scale($scale);
+}
+
+//background size cover
+.back-cover {
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+}
+
+//default style for anchors in this template
+a, .anchor {
+    display: inline-block;
+    text-decoration: none !important;
+
+    @include transition(0.2s);
+}
+
+/*-------------------------------------------------
+ =  Responsive mixins
+-------------------------------------------------*/
+
+// small devices view
+$small-dev-width: 768px;
+
+// medium devices view
+$medium-dev-width: 991px;
+
+// large devices view
+$large-dev-width: 1199px;
+
+
+@mixin mobile {
+    @media (max-width: #{$small-dev-width}) {
+      @content;
+    }
+}
+
+@mixin tablets {
+    @media (max-width: #{$medium-dev-width}) {
+      @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: #{$large-dev-width}) {
+      @content;
+    }
+}

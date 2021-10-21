@@ -1,0 +1,285 @@
+
+ 
+/*-------------------------------------------------- */
+/* 1. Isotope filtering */
+/*------------------------------------------------- */
+.isotope-item {
+    z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+
+.isotope, .isotope .isotope-item {
+    // change duration value to whatever you like
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
+
+/*-----------------------------------------------------------------------------
+ *
+ *KENBURNER RESPONSIVE BASIC STYLES OF HTML DOCUMENT
+ *
+ *Screen Stylesheet
+ *
+ *version:    1.0
+ *date:       07/27/11
+ *author:     themepunch
+ *email:      support@themepunch.com
+ *website:    http://www.themepunch.com */
+/*----------------------------------------------------------------------------- */
+
+.boxedcontainer {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0px 30px;
+}
+
+/*********************************************
+ *    -   SETTINGS FOR BANNER CONTAINERS  -
+ ********************************************* */
+
+.tp-banner-container {
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.tp-banner {
+    width: 100%;
+    position: relative;
+}
+
+.tp-banner-fullscreen-container {
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+
+/*------------------------------------------------- */
+/* =  General */
+/*------------------------------------------------- */
+body {
+    font-family: $font-default;
+}
+
+#container {
+    overflow: hidden;
+    opacity: 0;
+}
+
+#container.active {
+    opacity: 1;
+}
+
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    @include transition(0.2s);
+    z-index: 9999;
+}
+
+.preloader img {
+    -webkit-backface-visibility: hidden;
+}
+
+.title-section {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    h2 {
+        margin-bottom: 0;
+    }
+    span {
+        @extend .heading4;
+        margin-bottom: 0;
+    }
+}
+
+.title-section.white-style {
+    h2 {
+        color: #ffffff;
+    }
+}
+
+#home-section {
+    overflow: hidden;
+    background: #111111;
+    .tp-caption.Concept-Title {
+        font-size: 90px;
+        font-family: $font-default;
+        font-weight: 600 !important;
+        letter-spacing: -2px !important;
+        color: $title-color;
+    }
+    .tp-caption.Concept-SubTitle {
+        font-family: $font-default;
+        font-size: 26px;
+        font-style: normal !important;
+        font-weight: 400 !important;
+        text-align: center;
+        color: $text-color;
+    }
+    .persephone .tp-bullet {
+        width: 30px;
+        height: 3px;
+        background: rgba(255,255,255,0.5);
+        border: none;
+    }
+    .persephone .tp-bullet:hover, .persephone .tp-bullet.selected {
+        background: #fff;
+    }
+}
+
+a.button-one {
+    color: $title-color;
+    font-size: 18px;
+    padding: 10px 35px;
+    border: 1px solid $primary-color;
+    font-weight: 600;
+    @include transition(0.2s);
+    margin: 0;
+    &:hover {
+        color: #ffffff;
+        background: $primary-color;
+    }
+}
+
+a.button-two {
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 35px;
+    background: $primary-color;
+    font-weight: 600;
+    @include transition(0.2s);
+    margin: 0;
+    &:hover {
+        color: $primary-color;
+        background: #ffffff;
+    }
+}
+
+.center-button {
+    text-align: center;
+}
+
+
+button.mfp-close, button.mfp-arrow, a.zoom {
+    outline: none;
+}
+
+section.page-banner-section {
+    padding: 150px 0 75px;
+    @include retina('../upload/banners/page-ban.jpg', 2, cover, center center no-repeat);
+    h1 {
+        font-size: 50px;
+        color: #ffffff;
+        margin-bottom: 0px;
+    }
+    span {
+        font-size: 22px;
+        font-family: $font-default;
+        font-weight: 400;
+        margin-bottom: 0;
+        color: #999999;
+    }
+}
+
+ul.page-ban-list {
+    @extend .reset-elem;
+    padding: 16px 0;
+    li {
+        display: inline-block;
+        margin-right: 4px;
+        a {
+            color: $text-color;
+            font-size: 16px;
+            font-family: $font-alternative;
+            @include transition(0.2s);
+        }
+        a:hover {
+            color: $primary-color;
+            text-decoration: underline !important;
+        }
+    }
+    li:before {
+        content: '\f105';
+        font-family: 'FontAwesome';
+        font-size: 14px;
+        color: $text-color;
+        margin-right: 6px;
+    }
+    li:first-child:before {
+        content: '';
+        margin-right: 0;
+    }
+}
+
+.marg-top {
+    margin-top: 80px;
+    ul.page-ban-list {
+        border-top: 1px solid #252428;
+    }
+}
+
+.ban-line-section {
+    background: $primary-color;
+    padding: 70px;
+    text-align: center;
+    h2 {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+}
+
+.ban-line-section.second-style {
+    background: #fff;
+    text-align: center;
+    h2 {
+        color: $title-color;
+        span {
+            display: inline-block;
+            margin-right: 100px;
+        }
+        a {
+            line-height: 20px;
+        }
+    }
+}
+
+@include mobile {
+    h2 {
+        font-size: 34px !important;
+        line-height: 40px !important;
+    }
+    h1 {
+        font-size: 46px !important;
+        line-height: 50px !important;
+    }
+}

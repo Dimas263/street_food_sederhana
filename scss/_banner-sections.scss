@@ -1,0 +1,73 @@
+
+/*------------------------------------------------- */
+/* =  Banner sections */
+/*------------------------------------------------- */
+
+section.banner-section {
+    padding: 130px 0;
+    @include retina('../upload/banners/1.jpg', 2, cover, center center no-repeat);
+    h3 {
+        font-weight: 400;
+        color: #aaaaaa;
+    }
+    h2 {
+        color: #ffffff;
+    }
+    span {
+        display: block;
+        color: $primary-color;
+        font-size: 70px;
+        font-weight: 600;
+        margin-bottom: 35px;
+        line-height: 60px;
+        @include mobile {
+            font-size: 50px;
+            line-height: 44px;
+        }
+    }
+}
+
+section.banner-section2 {
+    padding: 130px 0;
+    text-align: center;
+    @include retina('../upload/banners/ban2.jpg', 2, cover, center center no-repeat);
+    .banner-box {
+        max-width: 820px;
+        margin: 0 auto;
+    }
+    h3 {
+        font-weight: 400;
+        color: #aaaaaa;
+        margin-bottom: 25px;
+    }
+    h2 {
+        color: #ffffff;
+    }
+}
+
+section.banner-section3 {
+    padding: 190px 0;
+    @include retina('../upload/banners/ban9.jpg', 2, cover, center center no-repeat);
+    @include tablets {
+        background: #ebebeb;
+    }
+    &.bg-second {
+		@include retina('../upload/banners/ban12.jpg', 2, cover, center center no-repeat);
+	}
+    h3 {
+        font-weight: 400;
+        color: #999999;
+    }
+    span {
+        display: block;
+        color: $primary-color;
+        font-size: 70px;
+        font-weight: 600;
+        margin-bottom: 35px;
+        line-height: 60px;
+        @include mobile {
+            font-size: 50px;
+            line-height: 44px;
+        }
+    }
+}
