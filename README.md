@@ -1,17 +1,18 @@
-# Website Street Food Sederhana
-website street food sederhana atau coffe shop, cocok untuk mengembangkan bisnis anda
+# <img src="upload/gallery/icon.png" width="50"/> Website Street Food Sederhana
+website street food sederhana dan coffe shop, cocok untuk mengembangkan bisnis anda
 
-## Tampilan Aplikasi
+## <img src="https://img.icons8.com/color/48/undefined/laptop--v1.png"/> Tampilan Aplikasi
 <img src="upload/demo.png" alt="alt text" width="=600"/>
 
-## Demo Aplikasi
-<img src="upload/demo.gif" alt="alt text" width="600"/>
+## <img src="https://img.icons8.com/fluent/48/undefined/domain.png"/> Demo Aplikasi<br>[Website Street Food](https://webku.one/app/street-food-sederhana/)
 
 <!--
 ## Contact
 [Dimas263](https://github.com/Dimas263/street_food_sederhana)
 -->
 
+## <img src="https://img.icons8.com/external-sbts2018-flat-sbts2018/48/undefined/external-team-work-from-home-sbts2018-flat-sbts2018.png"/> Developer Team
+## Dimas Dwi Putra `51418957`<br>Khoufan Itsmi `53418687`<br>Andrew christoper sitorus `50418789`
 ## License
 
 MIT License
